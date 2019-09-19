@@ -1,5 +1,6 @@
 # radcommlink
 ############################################################################
+
  Copyright (C) 2019 GrizzWorks, LLC
  ALL RIGHTS RESERVED
  This file is part of radcommlink software project under the GNU GPLv3
@@ -15,6 +16,7 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ############################################################################
+
 A Qt client layered above a working installation of PAT used for two-way radio message forwarding.  See: https://getpat.io
 
 This project is a framework for a client which works alongside the excellent cross-platform PAT Winlink client.
