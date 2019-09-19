@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PATerm</class>
+ <widget class="QMainWindow" name="PATerm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>607</width>
+    <height>526</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PATerm Radio Only</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="2">
+     <widget class="QComboBox" name="transportComboBox">
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>pactor</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ax25</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>winmor</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ardop</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>telnet</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="0" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Dest</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Transport</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QCheckBox" name="radioOnlyCheckBox">
+      <property name="text">
+       <string>Radio Only</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Dial Freq</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QComboBox" name="stationComboBox">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="maxVisibleItems">
+       <number>25</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QComboBox" name="dialFreqComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>If rig control enabled set frequency here.  Otherwise leave EMPTY.</string>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="3">
+     <widget class="QPushButton" name="msgDeleteButton">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Delete Selected Msg</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="6">
+     <widget class="QPushButton" name="connectButton">
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Connect</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="7">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="8">
+     <widget class="QPushButton" name="clearButton">
+      <property name="font">
+       <font>
+        <family>FreeSans</family>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clears the text area below of all text.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Clear Text</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" colspan="9">
+     <widget class="QPlainTextEdit" name="patConsole">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#bbb;
+color:blue;</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="9">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTreeView" name="msgQueueTreeView">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>true</bool>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QPlainTextEdit" name="receiveTextArea"/>
+     </widget>
+    </item>
+    <item row="6" column="5" colspan="4">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="toolTip">
+       <string>Manual command line to Pat</string>
+      </property>
+      <property name="placeholderText">
+       <string>Manual command line to Pat.  Press &lt;Enter&gt; to send.</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Compose"/>
+   <addaction name="separator"/>
+   <addaction name="action_Station_List"/>
+   <addaction name="action_Update_Station_List"/>
+   <addaction name="actionGetting_Started"/>
+   <addaction name="action_About_PATerm"/>
+   <addaction name="separator"/>
+   <addaction name="actionE_xit"/>
+  </widget>
+  <action name="actionE_xit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="action_About_PATerm">
+   <property name="text">
+    <string>&amp;About PATerm</string>
+   </property>
+  </action>
+  <action name="action_Compose">
+   <property name="text">
+    <string>&amp;Compose</string>
+   </property>
+  </action>
+  <action name="action_Station_List">
+   <property name="text">
+    <string>&amp;Station List</string>
+   </property>
+  </action>
+  <action name="action_Update_Station_List">
+   <property name="text">
+    <string>&amp;Update Station List</string>
+   </property>
+  </action>
+  <action name="actionGetting_Started">
+   <property name="text">
+    <string>Getting Started</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>stationComboBox</tabstop>
+  <tabstop>transportComboBox</tabstop>
+  <tabstop>msgQueueTreeView</tabstop>
+  <tabstop>msgDeleteButton</tabstop>
+  <tabstop>patConsole</tabstop>
+  <tabstop>receiveTextArea</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

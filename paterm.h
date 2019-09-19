@@ -1,0 +1,51 @@
+#ifndef PATERM_H
+#define PATERM_H
+
+#include <QMainWindow>
+#include <QProcess>
+#include <QSerialPort>
+#include <QFileSystemModel>
+#include <QSettings>
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class PATerm; }
+QT_END_NAMESPACE
+
+class PATerm : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    PATerm(QWidget *parent = nullptr);
+    ~PATerm();
+    void closeEvent(QCloseEvent *event);
+private slots:
+    void on_actionE_xit_triggered();
+    void on_lineEdit_returnPressed();
+    void on_readyRead();
+    bool eventFilter(QObject *obj, QEvent *event);
+    void slot_showMsgQueueContextMenu(const QPoint &pos);
+    void on_msgDeleteButton_clicked();
+    void on_msgQueueTreeView_clicked(const QModelIndex &index);
+    QString loadStringFromFile(const QString filename);
+    void on_action_Compose_triggered();
+    void on_connectButton_clicked();
+    void on_clearButton_clicked();
+    void on_action_Station_List_triggered();
+    void on_action_Update_Station_List_triggered();
+    void expandAll();
+    void on_actionGetting_Started_triggered();
+    void on_action_About_PATerm_triggered();
+
+private:
+    Ui::PATerm *ui;
+    QFileSystemModel *queue = nullptr;
+    QSettings *settings = nullptr;
+    QProcess *shell = nullptr;
+    QSerialPort *ptc = nullptr;
+    QByteArray CRLF = QByteArrayLiteral("\r\n");
+    QString lastCmd;
+    bool b_connectMode = false;
+    void saveSettings();
+};
+#endif // PATERM_H
