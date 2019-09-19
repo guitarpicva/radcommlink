@@ -374,6 +374,6 @@ void PATerm::on_action_About_PATerm_triggered()
     QMessageBox::information(this, "About radcommlink", \
                              "Copyright 2019, GrizzWorks, LLC\n\n" \
 "radcommlink is offered under the GPL v3 license included in the distribution\n\n" \
-"or which can be found at https://www.gnu.org/licenses/lgpl-3.0.txt."
+"or which can be found at https://www.gnu.org/licenses/gpl-3.0.txt."
                              );
 }
