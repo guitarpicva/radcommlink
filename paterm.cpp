@@ -266,7 +266,7 @@ QString PATerm::loadStringFromFile(const QString filename) {
         qApp->processEvents();
         counter++;
         if(counter>10) {
-            ui->receiveTextArea->appendPlainText("PATerm is in Unable to load the text from the file.");
+            ui->receiveTextArea->appendPlainText("radcommlink is in Unable to load the text from the file.");
             ui->receiveTextArea->moveCursor(QTextCursor::End);
             return msgText; // empty
         }
@@ -362,18 +362,18 @@ void PATerm::on_action_Update_Station_List_triggered()
 
 void PATerm::on_actionGetting_Started_triggered()
 {
-    QMessageBox::information(this, "Getting Started with PATerm", \
+    QMessageBox::information(this, "Getting Started with radcommlink", \
                              "Step One: Install and configure PAT, from https://getpat.io.\n" \
-"If you installed PAT in a default manner, you are ready to use PATerm.\n\n" \
+"If you installed PAT in a default manner, you are ready to use radcommlink.\n\n" \
 "In other words, the .wl2k folder MUST be in the current user's home directory."
                              );
 }
 
 void PATerm::on_action_About_PATerm_triggered()
 {
-    QMessageBox::information(this, "About PATerm", \
+    QMessageBox::information(this, "About radcommlink", \
                              "Copyright 2019, GrizzWorks, LLC\n\n" \
-"PATerm is offered under the LGPL v3 license included in the distribution\n\n" \
+"radcommlink is offered under the GPL v3 license included in the distribution\n\n" \
 "or which can be found at https://www.gnu.org/licenses/lgpl-3.0.txt."
                              );
 }
