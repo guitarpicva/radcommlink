@@ -35,4 +35,4 @@ The user may update and display the Station List from the UI.  The connection co
 
 NOTE: the .wl2k folder MUST be in the current user's home directory.  If the user has installed PAT in an alternate manner, then a symlink should be created from that location to ~/.wl2k in order for radcommlink to function properly.
 
-This project was initiated on Linux and is geared to those who wish to use Winlink but do not wish to use Windows or Winlink Express.  While it should function fine with a Windows based PAT installation, it has not been tested.  Observations and expericnes on Windows are welcome.
+This project was initiated on Linux and is geared to those who wish to use Winlink but do not wish to use Windows or Winlink Express.  While it should function fine with a Windows based PAT installation, it has not been tested.  Observations and experiences on Windows are welcome.
