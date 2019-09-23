@@ -65,7 +65,7 @@ void StationListDialog::loadRMSList()
     //qDebug()<<vl.at(0)<<"\n";
     for (int i = 0; i < vl.count(); i++)
     {
-        qDebug()<<"[Station Record]";
+        //qDebug()<<"[Station Record]";
         QVariantMap vm = vl.at(i).toMap();
         QString currStation;
         foreach(const QVariant s, vm.keys())
@@ -79,16 +79,16 @@ void StationListDialog::loadRMSList()
             else if(s.toString() == "GatewayChannels")
             {
                 QStringList flist; // list of channels for one station
-                qDebug()<<"\n[Gateway Channels for " + currStation +"]";
+                //qDebug()<<"\n[Gateway Channels for " + currStation +"]";
                 QVariantList gl = vm.value("GatewayChannels").toList();
                 for (int j = 0; j < gl.count(); j++)
                 {
-                    qDebug()<<"";
+                    //qDebug()<<"";
                     QVariantMap gm = gl.at(j).toMap();
                     foreach (const QVariant g, gm.keys())
                     {
                         const QString gVal = gm.value(g.toString()).toString();
-                        qDebug()<<g.toString()<<gVal;
+                        //qDebug()<<g.toString()<<gVal;
                         if(g.toString() == "Frequency")
                         {
                             flist<<gVal;
@@ -98,15 +98,15 @@ void StationListDialog::loadRMSList()
 
                 }
                 freqMap.insert(currStation, flist.join(", "));
-                qDebug()<<"\n[End Gateway Channels]\n\n";
+                //qDebug()<<"\n[End Gateway Channels]\n\n";
             }
-            else
-                qDebug()<<s.toString()<<vm.value(s.toString()).toString();
+//            else
+//                qDebug()<<s.toString()<<vm.value(s.toString()).toString();
         }
-        qDebug()<<"\n\n";
+        //qDebug()<<"\n\n";
     }
     stations.sort();
-    qDebug()<<"Station List"<<freqMap;
+    //qDebug()<<"Station List"<<freqMap;
     //qDebug()<<"Freq List"<<freqs.keys();
 //    ui->stationComboBox->clear();
 //    ui->stationComboBox->addItems(stations);
