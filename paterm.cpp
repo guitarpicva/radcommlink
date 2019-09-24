@@ -295,8 +295,6 @@ QString PATerm::loadStringFromFile(const QString filename) {
     QString line;
     while (!in.atEnd()) {
         line = in.readLine(); // strips line ends
-//        if(Q_LIKELY(!line.endsWith(FIVE_SPACE))) // sot
-//            line = line.trimmed();
         msgText.append(line.toLatin1()).append("\r\n");
     }
     //msgText = loadedFile->readAll();
@@ -373,7 +371,7 @@ void PATerm::on_action_Station_List_triggered()
 
 void PATerm::on_action_Update_Station_List_triggered()
 {
-    shell->write("pat rmslist -d\r\n");
+    shell->write("pat rmslist -d\n");
 }
 
 void PATerm::on_actionGetting_Started_triggered()

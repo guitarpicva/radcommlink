@@ -22,6 +22,7 @@
 #include <QJsonArray>
 #include <QTableWidgetItem>
 #include <QFile>
+#include <QDir>
 #include <QMap>
 
 #include <QDebug>
@@ -48,7 +49,7 @@ void StationListDialog::loadRMSList()
      * [{\"Timestamp\":\"\\/Date(1568493300000)\\/\",\"Callsign\":\"NNA0AK\",\"BaseCallsign\":\"NNA0AK\",\"Latitude\":64.886517803837,\"Longitude\":-147.73029018442,\"HoursSinceStatus\":3,\"LastStatus\":\"Sat, 14 Sep 2019 20:35:00 UTC\",\"Comments\":\"\",\"RequestedMode\":\"AnyAll\",\"GatewayChannels\":
      * */
     QString rawjson;
-    QFile rmslist("/home/mitch/.wl2k/rmslist.json");
+    QFile rmslist(QDir::homePath() + "/.wl2k/rmslist.json");
     if(rmslist.open(QFile::ReadOnly))
     {
         rawjson = rmslist.readAll();
