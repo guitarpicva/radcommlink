@@ -33,6 +33,6 @@ The user may create WINLINK style messages into the PAT mailbox structure direct
 
 The user may update and display the Station List from the UI.  The connection controls allow the user to choose the remote station, the transport (ax25,ardop,winmor,pactor,telnet).  Pactor transport functionality is part of the development branch of PAT at the moment (2019-09). The user may choose a "Radio only" connection, and choose the dial frequency if radio control is configured.
 
-NOTE: the .wl2k folder MUST be in the current user's home directory.  If the user has installed PAT in an alternate manner, then a symlink should be created from that location to ~/.wl2k in order for radcommlink to function properly.
+NOTE: the .wl2k folder MUST be in the current user's home directory.  If the user has installed PAT in an alternate manner, then a symlink should be created from the mailbox location to ~/.wl2k in order for radcommlink to function properly.
 
 This project was initiated on Linux and is geared to those who wish to use Winlink but do not wish to use Windows or Winlink Express.  While it should function fine with a Windows based PAT installation, it has not been tested.  Observations and experiences on Windows are welcome.
