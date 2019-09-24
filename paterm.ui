@@ -88,6 +88,12 @@
     </item>
     <item row="1" column="0" colspan="2">
      <widget class="QComboBox" name="stationComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="editable">
        <bool>true</bool>
       </property>
