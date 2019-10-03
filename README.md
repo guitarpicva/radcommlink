@@ -25,7 +25,7 @@ PAT has a command line interface and a web interface.  These may be considered i
 
 The project is written using the Qt5 framework, currently 5.12.3, but the project should compile and run even in Qt4 (untested).
 
-The Qt libraries qserialport and qnetwork are required along with qtbase and all other basic libraries for Qt functionality. (Debian and derivatives use: sudo apt install qt5base qt5serialport5-dev qt5network5-dev).  A .pro file is included for use with current versions of the QtCreator IDE.
+The Qt libraries qserialport and qnetwork are required along with qtbase and all other basic libraries for Qt functionality. (Debian and derivatives use: sudo apt install qt5-default qt5serialport5-dev qt5network5-dev).  A .pro file is included for use with current versions of the QtCreator IDE.
 
 The basic process for using radcommlink is to install PAT, configure it to your liking and ensure that it all works peroperly from the command line.  Once this is accomplished, starting radcommlink should be able to "talk to" and interact with the PAT installation in order to take advantage of it's services.
 
