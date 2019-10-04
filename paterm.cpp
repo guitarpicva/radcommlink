@@ -391,3 +391,15 @@ void PATerm::on_action_About_PATerm_triggered()
 "or which can be found at https://www.gnu.org/licenses/gpl-3.0.txt."
                              );
 }
+
+void PATerm::on_abortButton_clicked()
+{
+    if(shell)
+    {
+        QString s_pid = QString::number(shell->processId());
+        qDebug()<<"s_pid"<<s_pid;
+        auto ret = system(QString("kill -2 " + s_pid).toLatin1().data());
+        qApp->processEvents();
+        ret = system(QString("kill -2 " + s_pid).toLatin1().data());
+    }
+}

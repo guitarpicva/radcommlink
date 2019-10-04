@@ -53,6 +53,8 @@ private slots:
     void on_actionGetting_Started_triggered();
     void on_action_About_PATerm_triggered();
 
+    void on_abortButton_clicked();
+
 private:
     Ui::PATerm *ui;
     QFileSystemModel *queue = nullptr;
