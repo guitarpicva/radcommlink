@@ -42,6 +42,11 @@ ComposeDialog::~ComposeDialog()
     delete ui;
 }
 
+void ComposeDialog::closeEvent(QCloseEvent *)
+{
+    saveSettings();
+}
+
 void ComposeDialog::on_discardButton_clicked()
 {
     QString tmp = ui->fromComboBox->currentText().trimmed().toUpper();

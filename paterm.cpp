@@ -263,8 +263,9 @@ void PATerm::on_msgQueueTreeView_clicked(const QModelIndex &index)
         const QString fName = queue->filePath(index);
         if(fName.contains(QRegExp("[A-Z0-9]{12}.b2f")))
         {
-            ui->receiveTextArea->appendPlainText(loadStringFromFile(fName));
-            ui->receiveTextArea->moveCursor(QTextCursor::End);
+            ui->receiveTextArea->clear();
+            ui->receiveTextArea->setPlainText(loadStringFromFile(fName));
+            ui->receiveTextArea->moveCursor(QTextCursor::Start);
         }
     }
 }

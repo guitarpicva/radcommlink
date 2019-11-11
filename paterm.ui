@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>607</width>
+    <width>616</width>
     <height>526</height>
    </rect>
   </property>
@@ -303,10 +303,16 @@ color:blue;</string>
  <tabstops>
   <tabstop>stationComboBox</tabstop>
   <tabstop>transportComboBox</tabstop>
-  <tabstop>msgQueueTreeView</tabstop>
-  <tabstop>msgDeleteButton</tabstop>
-  <tabstop>patConsole</tabstop>
+  <tabstop>radioOnlyCheckBox</tabstop>
+  <tabstop>dialFreqComboBox</tabstop>
+  <tabstop>connectButton</tabstop>
+  <tabstop>lineEdit</tabstop>
   <tabstop>receiveTextArea</tabstop>
+  <tabstop>clearButton</tabstop>
+  <tabstop>msgQueueTreeView</tabstop>
+  <tabstop>patConsole</tabstop>
+  <tabstop>msgDeleteButton</tabstop>
+  <tabstop>abortButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>

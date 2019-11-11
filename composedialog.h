@@ -31,6 +31,7 @@ public:
     explicit ComposeDialog(QWidget *parent = nullptr);
     ~ComposeDialog();
 
+    void closeEvent(QCloseEvent *);
 private slots:
     void on_discardButton_clicked();
 
