@@ -154,10 +154,15 @@ void PATerm::slot_showMsgQueueContextMenu(const QPoint& pos)
     {
         QMenu treeFileMenu;
         treeFileMenu.addAction("Delete Message <Del>");
+        treeFileMenu.addAction("Archive Message");
         QAction* selectedItem = treeFileMenu.exec(globalPos);
         if (selectedItem)
         {
-            on_msgDeleteButton_clicked();
+            const QString item = selectedItem->text();
+            if(item == "Delete Messaeg <Del>")
+                on_msgDeleteButton_clicked();
+            else if(item == "Archive Message")
+                on_msgArchiveButton_clicked();
         }
     }
 }
@@ -402,5 +407,35 @@ void PATerm::on_abortButton_clicked()
         auto ret = system(QString("kill -2 " + s_pid).toLatin1().data());
         qApp->processEvents();
         ret = system(QString("kill -2 " + s_pid).toLatin1().data());
+    }
+}
+
+void PATerm::on_msgArchiveButton_clicked()
+{
+    // archive the selected message if any
+    QModelIndexList qmil = ui->msgQueueTreeView->selectionModel()->selectedIndexes();
+    if(qmil.size() < 1)
+        return; // nothing selected
+//    QStringList list;
+    QModelIndex lastIdx;
+
+    QString fName;
+    lastIdx = qmil.at(0);
+    fName = queue->filePath(lastIdx);
+    //qDebug()<<"fName:"<<fName;
+    QString base = fName.mid(0, fName.lastIndexOf("/"));
+    base = base.mid(0, base.lastIndexOf("/"));
+    QFile::rename(fName, base + "/archive/" + fName.mid(fName.lastIndexOf("/")));
+//    }
+    // try to select the nearest index that is left
+    if(lastIdx.isValid())
+    {
+        ui->msgQueueTreeView->selectionModel()->select(ui->msgQueueTreeView->indexBelow(lastIdx), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+        ui->msgQueueTreeView->clicked(ui->msgQueueTreeView->indexBelow(lastIdx));
+    }
+    else
+    {
+        ui->msgQueueTreeView->selectionModel()->select(queue->index(0, 0), QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+        ui->msgQueueTreeView->clicked(queue->index(0, 0));
     }
 }

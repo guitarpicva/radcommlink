@@ -55,6 +55,8 @@ private slots:
 
     void on_abortButton_clicked();
 
+    void on_msgArchiveButton_clicked();
+
 private:
     Ui::PATerm *ui;
     QFileSystemModel *queue = nullptr;

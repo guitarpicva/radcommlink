@@ -100,8 +100,9 @@
   <tabstop>fromComboBox</tabstop>
   <tabstop>lineEdit</tabstop>
   <tabstop>plainTextEdit</tabstop>
-  <tabstop>postButton</tabstop>
+  <tabstop>p2pCheckBox</tabstop>
   <tabstop>discardButton</tabstop>
+  <tabstop>postButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>
