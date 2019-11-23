@@ -165,3 +165,8 @@ void ComposeDialog::loadSettings()
     ui->toComboBox->addItems(s.value("addressees", "").toStringList());
 
 }
+
+void ComposeDialog::on_ics213TemplateButton_clicked()
+{
+    ui->plainTextEdit->setPlainText(ICS213TEMPLATE);
+}

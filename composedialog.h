@@ -37,8 +37,11 @@ private slots:
 
     void on_postButton_clicked();
 
+    void on_ics213TemplateButton_clicked();
+
 private:
     Ui::ComposeDialog *ui;
+    const QString ICS213TEMPLATE = "1. \r\n2. \r\n3. \r\n4. \r\n5. \r\n6. \r\n7. \r\n8. \r\n9. \r\n10. ";
     void saveSettings();
     void loadSettings();
 };
