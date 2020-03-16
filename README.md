@@ -64,8 +64,7 @@ errors, and other information.
 
 The user may update and display the Station List from the UI.  The connection
 controls allow the user to choose the remote station, the transport
-(ax25,ardop,winmor,pactor,telnet).  Pactor transport functionality is part
-of the development branch of PAT at the moment (2019-09). The user may choose
+(ax25,ardop,winmor,pactor,telnet).  The user may choose
 a "Radio only" connection, and choose the dial frequency if radio control is
 configured.
 
