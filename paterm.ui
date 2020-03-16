@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>632</width>
+    <width>638</width>
     <height>526</height>
    </rect>
   </property>
@@ -104,7 +104,7 @@ color:blue;</string>
        </font>
       </property>
       <property name="text">
-       <string>Archive Selected Msg</string>
+       <string>Archive Selected</string>
       </property>
       <property name="flat">
        <bool>true</bool>
@@ -134,7 +134,7 @@ color:blue;</string>
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clears the text area below of all text.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>Clear Text</string>
+       <string>Clear</string>
       </property>
       <property name="flat">
        <bool>true</bool>
@@ -174,7 +174,7 @@ color:blue;</string>
        </font>
       </property>
       <property name="text">
-       <string>Delete Selected Msg</string>
+       <string>Delete Selected</string>
       </property>
       <property name="flat">
        <bool>true</bool>

@@ -63,7 +63,10 @@ private:
     QSettings *settings = nullptr;
     QProcess *shell = nullptr;
     QSerialPort *ptc = nullptr;
-    QByteArray CRLF = QByteArrayLiteral("\r\n");
+    const QByteArray CRLF = QByteArrayLiteral("\r\n");
+    const QByteArray LF = QByteArrayLiteral("\n");
+    const QByteArray BG = QByteArrayLiteral(" &");
+    const QByteArray KILLPAT = QByteArrayLiteral("killall pat");
     QString lastCmd;
     bool b_connectMode = false;
     void saveSettings();

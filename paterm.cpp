@@ -186,8 +186,8 @@ void PATerm::on_lineEdit_returnPressed()
     const QString cmd = ui->lineEdit->text().trimmed().toLower();
     lastCmd = cmd;
     if(!cmd.isEmpty())
-        shell->write(cmd.toLatin1());
-    shell->write(CRLF);
+        shell->write(cmd.toLatin1()); // + BG);
+    shell->write(LF);
     ui->lineEdit->clear();
     if(cmd.contains("pat connect"))
     {
@@ -339,7 +339,9 @@ void PATerm::on_connectButton_clicked()
     }
     //qDebug()<<"connect:"<<out;
     shell->write(out);
-    shell->write("\n"); // for the shell, remember!
+    shell->write(LF); // for the shell, remember!
+    shell->write("ps ax|grep pat|grep connect|grep pactor:");
+    shell->write(LF);
     if(ui->stationComboBox->findText(to) < 0)
         ui->stationComboBox->addItem(to, to);
 }
@@ -402,11 +404,11 @@ void PATerm::on_abortButton_clicked()
 {
     if(shell)
     {
-        QString s_pid = QString::number(shell->processId());
-        qDebug()<<"s_pid"<<s_pid;
-        auto ret = system(QString("kill -2 " + s_pid).toLatin1().data());
-        qApp->processEvents();
-        ret = system(QString("kill -2 " + s_pid).toLatin1().data());
+        //QString s_pid = QString::number(shell->processId());
+//        auto ret = system(QString("killall pat"));
+//        qApp->processEvents();
+//        //ret = system(QString("kill -2 " + s_pid).toLatin1().data());
+        auto ret = system(KILLPAT);
     }
 }
 
