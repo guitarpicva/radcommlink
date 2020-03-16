@@ -409,6 +409,7 @@ void PATerm::on_abortButton_clicked()
 //        qApp->processEvents();
 //        //ret = system(QString("kill -2 " + s_pid).toLatin1().data());
         auto ret = system(KILLPAT);
+        Q_UNUSED(ret)
     }
 }
 
