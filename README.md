@@ -41,7 +41,7 @@ Manually compiling is something like the following:
 
 #Ensure the Qt tools are in the path:
 export PATH=~/Qt/5.12.3/gcc_64/bin:$PATH
-# test it
+/# test it
 qmake -v
 # should show you the version string if the path is correct
 # do a shadow build
