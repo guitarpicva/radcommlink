@@ -39,12 +39,18 @@ A .pro file is included for use with current versions of the QtCreator IDE.
 
 Manually compiling is something like the following:
 
-#Ensure the Qt tools are in the path:
+Ensure the Qt tools are in the path:
+
 export PATH=~/Qt/5.12.3/gcc_64/bin:$PATH
-/# test it
+
+test qmake
+
 qmake -v
-# should show you the version string if the path is correct
-# do a shadow build
+
+This should show you the version string if the path is correct
+
+Do a shadow build
+
 cd /home/me/build/radcommlink
 qmake /home/me/src/radcommlink/radcommlink.pro
 make
