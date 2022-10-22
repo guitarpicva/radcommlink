@@ -52,7 +52,9 @@ This should show you the version string if the path is correct
 Do a shadow build
 
 cd /home/me/build/radcommlink
+
 qmake /home/me/src/radcommlink/radcommlink.pro
+
 make
 
 The basic process for using radcommlink is to install PAT, configure it to
